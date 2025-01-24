@@ -1,0 +1,433 @@
+.card-header {
+    background-color: #CFE2FF;
+}
+
+.btn-primary {
+    background-color: white !important;
+}
+
+.btn-primary:hover {
+    color: white !important;
+    background-color: #dc3545 !important;
+}
+
+
+ul li {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bg-body-tertiary {
+    background-color: #8F47D7 !important;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#textarea {
+    resize: none;
+}
+
+.btn-block {
+    padding: 50px;
+    font-size: 1.25rem;
+}
+
+.btn-blocks {
+    padding: 50px 65px 50px 65px;
+    font-size: 1.25rem;
+}
+
+.form-check-input {
+    border: 1px solid #000 !important;
+}
+
+.card {
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-hover:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.unique-get-started-container {
+    background-image: url(https://site.chimpvine.com/wp-content/uploads/2023/12/cv-grades-background.png);
+    background-repeat: no-repeat;
+}
+
+.unique-navbar {
+    background-color: #8F47D7 !important;
+}
+
+a {
+    text-decoration: none;
+    color: #8F47D7;
+}
+
+a:hover {
+    color: #8F47D7;
+}
+
+.unique-typewrite>.wrap {
+    border-right: 0.08em solid #8F47D7;
+    color: #8F47D7;
+}
+
+.unique-button {
+    border-radius: 50px;
+    background-color: #FF683B;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 21px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.unique-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.unique-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.unique-button:hover span {
+    padding-right: 25px;
+}
+
+.unique-button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.upload-button {
+    border-radius: 20px;
+    background-color: #FF683B;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 21px;
+    padding: 15px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.upload-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.upload-button span:after {
+    content: '+';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.upload-button:hover span {
+    padding-right: 25px;
+}
+
+.upload-button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.footer .content,
+.social-content {
+    color: white;
+    text-decoration: none;
+}
+
+.social-content:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .content:hover {
+    color: #FF683B;
+    text-decoration: none;
+}
+
+.nav-link,
+.text-style {
+    color: #8F47D7;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: white;
+    background-color: #FF683B;
+}
+
+.nav-link-home,
+.nav-link-contact,
+.nav-link-elearning {
+    color: white;
+}
+
+
+.nav-link-splitter,
+.nav-link-navigate,
+.nav-link-tools {
+    color: black;
+}
+
+.nav-link-home:hover,
+.nav-link-tools:hover,
+.nav-link-contact:hover,
+.nav-link-splitter:hover,
+.nav-link-navigate:hover {
+    color: #FF683B;
+}
+
+.nav-link-home,
+.nav-link-navigate,
+.nav-link-splitter,
+.nav-link-tools {
+    padding-bottom: 4px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Active link style */
+.nav-link-home.active-link,
+.nav-link-navigate.active-link,
+.nav-link-splitter.active-link,
+.nav-link-tools.active-link {
+    border-bottom: 3px solid #FF683B;
+    color: #ffffff;
+}
+
+
+#sel_topic,
+#learning_objectives,
+#learning_objective,
+#description,
+#objective,
+#edit-objective,
+#inputs {
+    resize: none;
+}
+
+.resizeStyle {
+    resize: none;
+}
+
+@media print {
+    @page {
+        size: A4;
+    }
+
+    .no-print {
+        display: none;
+    }
+
+    .print-content {
+        page-break-after: always;
+    }
+
+    .print-content:first-child {
+        margin-top: 0;
+    }
+
+    .print-content:not(:first-child) {
+        margin-top: 1rem;
+    }
+
+    #bingo-container {
+        break-inside: avoid-page;
+
+    }
+}
+
+/* BreadCrumb - Navigation */
+.breadcrumb-container {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.breadcrumb {
+    font-size: 1.25rem;
+}
+
+.breadcrumb-item {
+    text-align: center;
+}
+
+.small-badge {
+    font-size: 0.7rem;
+    padding: 0.2em 0.4em;
+}
+
+/* Center text for small devices */
+@media (max-width: 768px) {
+    .footer .row {
+        text-align: center;
+    }
+
+    .footer ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    .footer ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer .social-media {
+        justify-content: center;
+    }
+}
+
+/* Math-Cal Css Styles*/
+.tampered {
+    background-image: linear-gradient(179deg,
+            #ffa620 0%,
+            #fba11a 50%,
+            transparent 54%,
+            transparent 100%);
+    font-weight: 700;
+    margin-bottom: 3.5rem;
+    background-size: 100% 15%;
+    background-repeat: repeat-x;
+    background-position: left 0% bottom 10%;
+    padding-bottom: 5px;
+}
+
+math-field {
+    position: relative;
+    margin-right: 4.5em;
+}
+
+math-field::part(virtual-keyboard-toggle) {
+    position: absolute;
+    color: #ff683b;
+    right: -3.5em;
+}
+
+math-field::part(menu-toggle) {
+    position: absolute;
+    color: #ff683b;
+    right: -6em;
+}
+
+@media (pointer: coarse) {
+
+    math-field::part(virtual-keyboard-toggle),
+    math-field::part(menu-toggle) {
+        min-width: 25px !important;
+        min-height: 25px !important;
+        margin-right: 0.75em;
+    }
+}
+
+.ML__base,
+.ML__is-inline {
+    display: inline !important;
+}
+
+.ML__latex {
+    display: inline !important;
+    word-wrap: break-word !important;
+    white-space: pre-wrap !important;
+    word-spacing: initial !important;
+}
+
+/* File Upload Styling */
+.btn-pdf-modal {
+    cursor: pointer;
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    opacity: 0 !important;
+    transition: all 0.2s;
+    background-color: red;
+    z-index: 999;
+}
+
+.btn-pdf-modal:hover .hover-overlay {
+    opacity: 0.5 !important;
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pdf-document,
+.pdf-document-page-loading {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.pdf-page>* {
+    width: fit-content !important;
+    height: auto !important;
+}
+
+.pdf-document.pdf-viewer,
+.pdf-document-page-loading.pdf-viewer {
+    background-color: var(--bs-gray-200);
+    height: 200px;
+    width: 200px;
+}
+
+.pdf-page.pdf-viewer>* {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.pdf-document.pdf-modal,
+.pdf-document-page-loading.pdf-modal {
+    width: 100%;
+    height: 500px;
+}
+
+.pdf-page.pdf-modal>* {
+    max-width: 80vw;
+    max-height: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+    .hover-overlay {
+        opacity: 0.5 !important;
+    }
+}
