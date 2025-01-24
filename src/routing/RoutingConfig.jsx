@@ -107,8 +107,8 @@ export default function RoutingConfig() {
             <Route path="writing" element={<Writing BASE_URL={BASE_URL} />} />
           </Route>
           <Route path="/math-homework-help" element={<MathCal />} />
-          {/* <Route path="/teacher-joke" element={<TeacherJoke BASE_URL={BASE_URL}/>} />
-          <Route path="/mystery-case" element={<MysteryCase BASE_URL={BASE_URL}/>} /> */}
+          <Route path="/teacher-joke" element={<TeacherJoke BASE_URL={BASE_URL}/>} />
+          <Route path="/mystery-case" element={<MysteryCase BASE_URL={BASE_URL}/>} />
           <Route path="/bingo-generator" element={<BingoGenerator BASE_URL={BASE_URL} />} />
           <Route path="/yt-summarizer" element={<YTSummarizer BASE_URL={BASE_URL} />} />
           <Route path="/fun-maths" element={<FunMaths BASE_URL={BASE_URL} />} />
