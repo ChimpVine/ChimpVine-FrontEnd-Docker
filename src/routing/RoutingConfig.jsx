@@ -34,6 +34,7 @@ import BingoGenerator from "../components/Gamification/BingoGenerator.jsx"
 import MysteryCase from "../components/Gamification/Mysterycase.jsx"
 import YTSummarizer from '../components/Summarizer/YTSummarizer.jsx';
 import FunMaths from '../components/Gamification/FunMaths.jsx';
+import SatEnglish from '../components/Assessment/SatEnglish.jsx';
 
 export default function RoutingConfig() {
   const location = useLocation();
@@ -68,7 +69,8 @@ export default function RoutingConfig() {
     '/mystery-case': 'Mystery Case - AI Tools for Teachers',
     '/yt-summarizer': 'YT Summarizer - AI Tools for Teachers',
     '/fun-maths': 'Fun Maths - AI Tools for Teachers',
-    '/comingsoon': 'Comingsoon - AI Tools for Teachers',
+    '/sat-english': 'SAT English - AI Tools for Teachers',
+    '/comingsoon': 'Comingsoon - AI Tools for Teachers'
   };
 
   const pageTitle = routeTitleMap[location.pathname] || 'Error 404 - AI Tools for Teachers';
@@ -114,6 +116,7 @@ export default function RoutingConfig() {
           <Route path="/fun-maths" element={<FunMaths BASE_URL={BASE_URL} />} />
           <Route path="/comingsoon" element={<ComingSoon />} />
         </Route>
+        <Route path="/sat-english" element={<SatEnglish />} />
         <Route path="/contact-us" element={<RequestForm BASE_URL={BASE_URL} />} />
         <Route path="/pdf-splitter" element={<PdfSplitter />} />
         <Route path="*" element={<Error404Page />} />
