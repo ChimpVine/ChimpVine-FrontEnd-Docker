@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import Spinner from '../../spinner/Spinner';
 import NavBreadcrumb from '../../pages/BreadCrumb/BreadCrumb';
-import Cookies from 'js-cookie'; 
+import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
 
 const difficultyLevels = [
@@ -61,7 +61,7 @@ export default function Maketheword({ BASE_URL }) {
             setApiResponse(response.data);
             toast.success('Words generated successfully!');
             reset();
-        } catch (error) { 
+        } catch (error) {
             if (error.response.status === 401) {
                 toast.warning('This email has been already used on another device.');
                 Cookies.remove('authToken');
@@ -71,9 +71,9 @@ export default function Maketheword({ BASE_URL }) {
                 localStorage.removeItem('authToken');
                 localStorage.removeItem('authUser');
                 setTimeout(() => {
-                    navigate('/login'); 
+                    navigate('/login');
                     window.location.reload();
-                }, 2000); 
+                }, 2000);
             } else {
                 const errorMessage = error.response?.data?.error || 'Failed to generate words. Please try again.';
                 toast.error(errorMessage);
@@ -180,7 +180,12 @@ export default function Maketheword({ BASE_URL }) {
                             <div id="main-btn">
                                 {renderWordGame(apiResponse, showAnswers)}
                                 <div className="text-center">
-                                    <button className="btn btn-sm mt-2 mb-3 me-2 no-print" style={btnStyle} onClick={() => setApiResponse(null)}>
+                                    <button className="btn btn-sm mt-2 mb-3 me-2 no-print"
+                                        style={btnStyle}
+                                        onClick={() => {
+                                            setApiResponse(null);
+                                            setShowAnswers(false);  
+                                        }}>
                                         <FaArrowLeft /> Generate Another Word Game
                                     </button>
                                     <button

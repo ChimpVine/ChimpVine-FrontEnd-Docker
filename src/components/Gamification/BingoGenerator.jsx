@@ -27,8 +27,7 @@ export default function BingoGenerator({ BASE_URL }) {
     const borderStyles = {
         flex: 1,
         minHeight: '80px',
-        minWidth: '80px',
-
+        minWidth: '80px'
     };
 
     const onSubmit = async (data) => {

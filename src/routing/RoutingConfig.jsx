@@ -35,6 +35,8 @@ import MysteryCase from "../components/Gamification/Mysterycase.jsx"
 import YTSummarizer from '../components/Summarizer/YTSummarizer.jsx';
 import FunMaths from '../components/Gamification/FunMaths.jsx';
 import SatEnglish from '../components/Assessment/SatEnglish.jsx';
+import CustomPlanner from '../components/Planner/CustomPlanner.jsx'
+import Feedback from '../pages/Feedback.jsx'
 
 export default function RoutingConfig() {
   const location = useLocation();
@@ -70,12 +72,16 @@ export default function RoutingConfig() {
     '/yt-summarizer': 'YT Summarizer - AI Tools for Teachers',
     '/fun-maths': 'Fun Maths - AI Tools for Teachers',
     '/sat-english': 'SAT English - AI Tools for Teachers',
-    '/comingsoon': 'Comingsoon - AI Tools for Teachers'
+    '/curriculum-planner': 'Curriculum Planner - AI Tools for Teachers',
+    '/feedback': 'Feedback - AI Tools for Teachers',
+    '/comingsoon': 'Comingsoon - AI Tools for Teachers' 
   };
 
   const pageTitle = routeTitleMap[location.pathname] || 'Error 404 - AI Tools for Teachers';
 
-  const BASE_URL = 'https://teachertools-api.chimpvine.com';
+  const BASE_URL = 'https://test-teachertools-api.chimpvine.com';
+
+  const SITE_KEY1 = '6Lc9qtkqAAAAAKcfQjX9YZvc9YuGQOg9syNzOq6K';
 
   ReactGA.initialize('G-TBNNYXX21K');
 
@@ -116,9 +122,11 @@ export default function RoutingConfig() {
           <Route path="/fun-maths" element={<FunMaths BASE_URL={BASE_URL} />} />
           <Route path="/comingsoon" element={<ComingSoon />} />
         </Route>
+        <Route path="/curriculum-planner" element={<CustomPlanner />} />
         <Route path="/sat-english" element={<SatEnglish />} />
-        <Route path="/contact-us" element={<RequestForm BASE_URL={BASE_URL} />} />
+        <Route path="/contact-us" element={<RequestForm  BASE_URL={BASE_URL}/>} />
         <Route path="/pdf-splitter" element={<PdfSplitter />} />
+        <Route path="/feedback" element={<Feedback BASE_URL={BASE_URL} SITE_KEY1={SITE_KEY1}/>} />
         <Route path="*" element={<Error404Page />} />
       </Routes>
     </HelmetProvider>

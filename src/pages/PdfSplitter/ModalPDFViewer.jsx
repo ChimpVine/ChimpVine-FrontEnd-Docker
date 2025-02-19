@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import * as bootstrap from "bootstrap";
 import { Document, Page, pdfjs } from "react-pdf";

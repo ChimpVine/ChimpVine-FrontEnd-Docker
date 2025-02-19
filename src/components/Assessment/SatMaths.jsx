@@ -23,7 +23,7 @@ const questionTypes = [
   { id: "Calculator Open Response", label: "Calculator Open Response" },
 ];
 
-export default function SatMath({BASE_URL}) {
+export default function SatMath({ BASE_URL }) {
   const navigate = useNavigate();
   const {
     register,
@@ -245,7 +245,7 @@ export default function SatMath({BASE_URL}) {
                       )}
                       {showAnswers && (
                         <p className="mt-4">
-                          <strong>Answer:{showAnswers ? question.correct_answer : ''}</strong> 
+                          <strong>Answer:{showAnswers ? question.correct_answer : ''}</strong>
                         </p>
                       )}
                     </div>
@@ -253,11 +253,12 @@ export default function SatMath({BASE_URL}) {
                 </div>
               ))}
               <div className="text-center mt-4">
-                <button
-                  className="btn btn-sm me-2 mt-2 no-print"
+                <button className="btn btn-sm mt-2 mb-3 me-2 no-print"
                   style={btnStyle}
-                  onClick={() => setApiResponse(null)}
-                >
+                  onClick={() => {
+                    setApiResponse(null);
+                    setShowAnswers(false);
+                  }}>
                   <FaArrowLeft /> Generate Another SAT Maths
                 </button>
                 <button

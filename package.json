@@ -1,5 +1,5 @@
 {
-  "name": "lessonplanner",
+  "name": "cv-planner",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -27,6 +27,7 @@
     "react-calendly": "^4.3.1",
     "react-dom": "^18.3.1",
     "react-ga4": "^2.1.0",
+    "react-google-recaptcha": "^3.1.0",
     "react-google-recaptcha-v3": "^1.10.1",
     "react-helmet-async": "^2.0.5",
     "react-hook-form": "^7.53.1",

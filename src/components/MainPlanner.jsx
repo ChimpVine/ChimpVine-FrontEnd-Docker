@@ -267,7 +267,7 @@ export default function MainPlanner() {
             ),
             title: 'Mystery Case',
             description: 'Create intriguing mystery cases that captivate and challenge your investigative skills.',
-            link: '/comingsoon',
+            link: '/mystery-case',
             btnColor: 'dark'
         },
         {
@@ -281,7 +281,7 @@ export default function MainPlanner() {
             ),
             title: 'Teacher Joke',
             description: 'Effortlessly craft teacher jokes that spark laughter and make learning fun.',
-            link: '/comingsoon',
+            link: '/teacher-joke',
             btnColor: 'primary'
         },
         {
