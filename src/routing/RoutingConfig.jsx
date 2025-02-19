@@ -15,7 +15,7 @@ import WordPuzzle from '../components/Gamification/WordPuzzle.jsx';
 import SocialStory from '../components/SpecialNeeds/SocialStory.jsx';
 import SelGenerator from '../components/Learning/SelGenerator.jsx';
 import SlideGenerator from '../components/Planner/SlideGenerator.jsx';
-import RequestForm from '../routing/RecaptchaConfig.jsx';
+// import RequestForm from '../routing/RecaptchaConfig.jsx';
 import PdfSplitter from '../pages/PdfSplitter/PdfSplitter-main.jsx';
 import TextSummarizer from '../components/Summarizer/TextSummarizer.jsx';
 import GroupWork from '../components/Assessment/GroupWork.jsx';
@@ -124,7 +124,7 @@ export default function RoutingConfig() {
         </Route>
         <Route path="/curriculum-planner" element={<CustomPlanner />} />
         <Route path="/sat-english" element={<SatEnglish />} />
-        <Route path="/contact-us" element={<RequestForm  BASE_URL={BASE_URL}/>} />
+        {/* <Route path="/contact-us" element={<RequestForm  BASE_URL={BASE_URL}/>} /> */}
         <Route path="/pdf-splitter" element={<PdfSplitter />} />
         <Route path="/feedback" element={<Feedback BASE_URL={BASE_URL} SITE_KEY1={SITE_KEY1}/>} />
         <Route path="*" element={<Error404Page />} />
