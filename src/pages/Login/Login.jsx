@@ -167,6 +167,7 @@ const Login = () => {
                                     <label style={pointerStyle}>Forgot Password?</label>
                                 </NavLink>
                             </div>
+                            
                             <div className="d-flex justify-content-between">
                                 <button type="button" className='btn btn-outline-danger btn-sm' onClick={handleReset} disabled={loading}>
                                     Reset
@@ -178,7 +179,7 @@ const Login = () => {
                             {errorMessage && <div style={errorMessageStyle}>{errorMessage}</div>}
                         </form>
                         <div className='mt-3'>
-                            <span>Dont have an account? </span>
+                            <span>Don't have an account? </span>
                             <NavLink to={`${API_BASE_URL}/register/subscription-free-for-2-months/`}>
                                 <label className='fw-bold' style={pointerStyle}>Sign Up Now</label>
                             </NavLink>

@@ -80,8 +80,25 @@ export default function ContactUs({ BASE_URL, SITE_KEY1 }) {
       setWordCount(0);
       setRecaptchaToken(null); // Reset reCAPTCHA token after successful submission
     } catch (error) {
-      console.error("Error submitting form:", error);
-      toast.error("Failed to submit the form. Please try again.");
+      if (error.response) {
+        // Log the entire response for debugging
+        console.log("Error response:", error.response);
+    
+        // Extract and log the specific error message
+        const errorMessage = error.response.data.error || "An error occurred.";
+        console.error("Error message from API:", errorMessage);
+    
+        // Optionally display the error message in the toast
+        toast.error(errorMessage);
+      } else if (error.request) {
+        // If no response is received from the server
+        console.error("No response received from server:", error.request);
+        toast.error("No response from the server. Please try again later.");
+      } else {
+        // Any other errors
+        console.error("Error submitting form:", error.message);
+        toast.error("An unexpected error occurred. Please try again.");
+      }
     } finally {
       setIsLoading(false);
     }
