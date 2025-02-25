@@ -82,7 +82,7 @@ export default function RoutingConfig() {
   const BASE_URL = 'https://test-teachertools-api.chimpvine.com';
   // const BASE_URL = 'http://192.168.1.76:5050';
 
-  const SITE_KEY1 = '6LdO6-EqAAAAANb9C6s64vpo32L4kV27hWuF6dq6';
+  const recaptcha_token = '6LdO6-EqAAAAANb9C6s64vpo32L4kV27hWuF6dq6';
 
   ReactGA.initialize('G-TBNNYXX21K');
 
@@ -127,7 +127,7 @@ export default function RoutingConfig() {
         <Route path="/sat-english" element={<SatEnglish />} />
         {/* <Route path="/contact-us" element={<RequestForm  BASE_URL={BASE_URL}/>} /> */}
         <Route path="/pdf-splitter" element={<PdfSplitter />} />
-        <Route path="/feedback" element={<Feedback BASE_URL={BASE_URL} SITE_KEY1={SITE_KEY1}/>} />
+        <Route path="/feedback" element={<Feedback BASE_URL={BASE_URL} recaptcha_token={recaptcha_token}/>} />
         <Route path="*" element={<Error404Page />} />
       </Routes>
     </HelmetProvider>

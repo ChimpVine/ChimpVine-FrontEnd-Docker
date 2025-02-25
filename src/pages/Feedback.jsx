@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Spinner from "../spinner/Spinner";
 import ReCAPTCHA from "react-google-recaptcha";
 
-export default function ContactUs({ BASE_URL, SITE_KEY1 }) {
+export default function ContactUs({ BASE_URL, recaptcha_token }) {
   const btnStyle = {
     backgroundColor: '#FF683B',
     color: 'white',
@@ -193,7 +193,7 @@ export default function ContactUs({ BASE_URL, SITE_KEY1 }) {
                 {/* reCAPTCHA */}
                 <div className="mb-3">
                   <ReCAPTCHA
-                    sitekey={SITE_KEY1} 
+                    sitekey={recaptcha_token} 
                     onChange={handleRecaptchaChange}
                   />
                 </div>
