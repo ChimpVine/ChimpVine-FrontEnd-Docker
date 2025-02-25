@@ -113,7 +113,7 @@ export default function NavBar() {
                                     </li>
                                 </ul>
                             </li>
-                            <li className="nav-item mt-2 p-2">
+                            {/* <li className="nav-item mt-2 p-2">
                                 <NavLink
                                     className={({ isActive }) =>
                                         isActive ? "nav-link-navigate me-5 text-light active-link" : "nav-link-navigate me-5 text-light"
@@ -122,7 +122,7 @@ export default function NavBar() {
                                 >
                                     Contact Us
                                 </NavLink>
-                            </li>
+                            </li> */}
                             <li className="nav-item mt-2 p-2">
                                 <NavLink
                                     className={({ isActive }) =>

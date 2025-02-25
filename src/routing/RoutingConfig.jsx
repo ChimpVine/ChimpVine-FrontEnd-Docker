@@ -15,7 +15,7 @@ import WordPuzzle from '../components/Gamification/WordPuzzle.jsx';
 import SocialStory from '../components/SpecialNeeds/SocialStory.jsx';
 import SelGenerator from '../components/Learning/SelGenerator.jsx';
 import SlideGenerator from '../components/Planner/SlideGenerator.jsx';
-import RequestForm from '../routing/RecaptchaConfig.jsx';
+// import RequestForm from '../routing/RecaptchaConfig.jsx';
 import PdfSplitter from '../pages/PdfSplitter/PdfSplitter-main.jsx';
 import TextSummarizer from '../components/Summarizer/TextSummarizer.jsx';
 import GroupWork from '../components/Assessment/GroupWork.jsx';
@@ -82,7 +82,7 @@ export default function RoutingConfig() {
   const BASE_URL = 'https://test-teachertools-api.chimpvine.com';
   // const BASE_URL = 'http://192.168.1.76:5050';
 
-  const SITE_KEY1 = '6Lc9qtkqAAAAAKcfQjX9YZvc9YuGQOg9syNzOq6K';
+  const SITE_KEY1 = '6LdO6-EqAAAAANb9C6s64vpo32L4kV27hWuF6dq6';
 
   ReactGA.initialize('G-TBNNYXX21K');
 
@@ -125,7 +125,7 @@ export default function RoutingConfig() {
         </Route>
         <Route path="/curriculum-planner" element={<CustomPlanner />} />
         <Route path="/sat-english" element={<SatEnglish />} />
-        <Route path="/contact-us" element={<RequestForm  BASE_URL={BASE_URL}/>} />
+        {/* <Route path="/contact-us" element={<RequestForm  BASE_URL={BASE_URL}/>} /> */}
         <Route path="/pdf-splitter" element={<PdfSplitter />} />
         <Route path="/feedback" element={<Feedback BASE_URL={BASE_URL} SITE_KEY1={SITE_KEY1}/>} />
         <Route path="*" element={<Error404Page />} />
