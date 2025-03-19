@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { PopupWidget  } from "react-calendly";
+import { PopupWidget } from "react-calendly";
 import {
     FaQuestionCircle,
     FaBookReader,
@@ -23,12 +23,12 @@ import {
 import { FaRegFaceLaughSquint } from "react-icons/fa6";
 import { TbMathSymbols, TbZoomQuestion } from "react-icons/tb";
 import { GiPuzzle } from "react-icons/gi";
-import { PiCirclesFourFill , PiMathOperationsFill  } from "react-icons/pi";
+import { PiCirclesFourFill, PiMathOperationsFill } from "react-icons/pi";
 import NavBar from './NavBar';
 import ReactGA from 'react-ga4';
 
 export default function MainPlanner() {
-    const [activeTab, setActiveTab] = useState('All'); 
+    const [activeTab, setActiveTab] = useState('All');
 
     useEffect(() => {
         ReactGA.send({ hitType: "pageview", page: window.location.pathname });
@@ -51,9 +51,9 @@ export default function MainPlanner() {
         {
             id: 1,
             category: 'Planner',
-            icon: <FaBookOpen  size={50} style={{ color: "#198754" }} />,
+            icon: <FaBookOpen size={50} style={{ color: "#198754" }} />,
             title: 'Lesson Planner',
-            description: 'Plan and organize your lessons effectively with our easy-to-use Lesson Planner.',
+            description: 'Plan and organize lessons easily with our intuitive and efficient Lesson Planner.',
             link: '/lesson-planner',
             btnColor: 'success'
         },
@@ -122,7 +122,7 @@ export default function MainPlanner() {
             category: 'Planner',
             icon: (
                 <div className="position-relative">
-                   <FaFilePowerpoint  size={50} style={{ color: "#dc3545" }}/>
+                    <FaFilePowerpoint size={50} style={{ color: "#dc3545" }} />
                     <span className="badge rounded-pill bg-success position-absolute top-0 end-0">Popular</span>
                 </div>
             ),
@@ -177,7 +177,7 @@ export default function MainPlanner() {
             category: 'Planner',
             icon: (
                 <div className="position-relative">
-                    <FaRegSmileBeam  size={50} style={{ color: "#0d6efd" }}/>
+                    <FaRegSmileBeam size={50} style={{ color: "#0d6efd" }} />
                     <span className="badge rounded-pill bg-success position-absolute top-0 end-0">Popular</span>
                 </div>
             ),
@@ -205,7 +205,7 @@ export default function MainPlanner() {
             category: 'Assessment',
             icon: (
                 <div className="position-relative">
-                   <TbMathSymbols size={50} />
+                    <TbMathSymbols size={50} />
                     <span className="badge rounded-pill bg-primary position-absolute top-0 end-0">New</span>
                 </div>
             ),
@@ -233,7 +233,7 @@ export default function MainPlanner() {
             category: 'Gamification',
             icon: (
                 <div className="position-relative">
-                    <PiMathOperationsFill  size={50} style={{ color: "#6c757d" }} />
+                    <PiMathOperationsFill size={50} style={{ color: "#6c757d" }} />
                     <span className="badge rounded-pill bg-primary position-absolute top-0 end-0">New</span>
                 </div>
             ),
@@ -261,8 +261,8 @@ export default function MainPlanner() {
             category: 'Gamification',
             icon: (
                 <div className="position-relative">
-                   <TbZoomQuestion size={50}/>
-                    <span className="badge rounded-pill bg-danger small-badge position-absolute top-0 end-0">Coming Soon</span>
+                    <TbZoomQuestion size={50} />
+                    <span className="badge rounded-pill bg-primary position-absolute top-0 end-0">New</span>
                 </div>
             ),
             title: 'Mystery Case',
@@ -275,12 +275,12 @@ export default function MainPlanner() {
             category: 'Gamification',
             icon: (
                 <div className="position-relative">
-                    <FaRegFaceLaughSquint size={50} style={{ color: "#0d6efd" }}/>
-                    <span className="badge rounded-pill bg-danger small-badge position-absolute top-0 end-0">Coming Soon</span>
+                    <FaRegFaceLaughSquint size={50} style={{ color: "#0d6efd" }} />
+                    <span className="badge rounded-pill bg-primary position-absolute top-0 end-0">New</span>
                 </div>
             ),
             title: 'Teacher Joke',
-            description: 'Effortlessly craft teacher jokes that spark laughter and make learning fun.',
+            description: 'Effortlessly craft clever teacher jokes that spark laughter and make learning fun.',
             link: '/teacher-joke',
             btnColor: 'primary'
         },
@@ -289,7 +289,7 @@ export default function MainPlanner() {
             category: 'Planner',
             icon: (
                 <div className="position-relative">
-                   <FaTasks size={50} style={{ color: "#dc3545" }}/>
+                    <FaTasks size={50} style={{ color: "#dc3545" }} />
                     <span className="badge rounded-pill bg-danger small-badge position-absolute top-0 end-0">Coming Soon</span>
                 </div>
             ),
@@ -303,7 +303,7 @@ export default function MainPlanner() {
             category: 'Assessment',
             icon: (
                 <div className="position-relative">
-                    <FaBookReader size={50}  style={{ color: "#198754" }}/>
+                    <FaBookReader size={50} style={{ color: "#198754" }} />
                     <span className="badge rounded-pill bg-danger small-badge position-absolute top-0 end-0">Coming Soon</span>
                 </div>
             ),
@@ -317,7 +317,7 @@ export default function MainPlanner() {
             category: 'Gamification',
             icon: (
                 <div className="position-relative">
-                   <GiPuzzle  size={50} style={{ color: "#198754" }}/>
+                    <GiPuzzle size={50} style={{ color: "#198754" }} />
                     <span className="badge rounded-pill bg-danger small-badge position-absolute top-0 end-0">Coming Soon</span>
                 </div>
             ),
@@ -331,7 +331,7 @@ export default function MainPlanner() {
             category: 'Assessment',
             icon: (
                 <div className="position-relative">
-                   <PiCirclesFourFill size={50} style={{ color: "#0d6efd" }} />
+                    <PiCirclesFourFill size={50} style={{ color: "#0d6efd" }} />
                     <span className="badge rounded-pill bg-danger small-badge position-absolute top-0 end-0">Coming Soon</span>
                 </div>
             ),
@@ -359,7 +359,7 @@ export default function MainPlanner() {
             category: 'Summarizer',
             icon: (
                 <div className="position-relative">
-                     <FaFilePdf size={50} style={{ color: "#6c757d" }} />
+                    <FaFilePdf size={50} style={{ color: "#6c757d" }} />
                     <span className="badge rounded-pill bg-danger small-badge position-absolute top-0 end-0">Coming Soon</span>
                 </div>
             ),
@@ -383,64 +383,136 @@ export default function MainPlanner() {
             />
             <NavBar />
             <div className="container py-5">
-                <div className="d-flex justify-content-center">
-                    <ul className="nav nav-pills nav-fill">
-                        <li className="nav-item me-2">
-                            <button
-                                className={`nav-link ${activeTab === 'All' ? 'active' : ''}`}
-                                onClick={() => handleTabClick('All')}
-                            >
-                                All
-                            </button>
-                        </li>
-                        <li className="nav-item me-2">
-                            <button
-                                className={`nav-link ${activeTab === 'Assessment' ? 'active' : ''}`}
-                                onClick={() => handleTabClick('Assessment')}
-                            >
-                                Assessment
-                            </button>
-                        </li>
-                        <li className="nav-item me-2">
-                            <button
-                                className={`nav-link ${activeTab === 'Summarizer' ? 'active' : ''}`}
-                                onClick={() => handleTabClick('Summarizer')}
-                            >
-                                Summarizer
-                            </button>
-                        </li>
-                        <li className="nav-item me-2">
-                            <button
-                                className={`nav-link ${activeTab === 'Gamification' ? 'active' : ''}`}
-                                onClick={() => handleTabClick('Gamification')}
-                            >
-                                Gamification
-                            </button>
-                        </li>
-                        <li className="nav-item me-2">
-                            <button
-                                className={`nav-link ${activeTab === 'Planner' ? 'active' : ''}`}
-                                onClick={() => handleTabClick('Planner')}
-                            >
-                                Planner
-                            </button>
-                        </li>
-                        <li className="nav-item me-2">
-                            <button
-                                className={`nav-link ${activeTab === 'Learning' ? 'active' : ''}`}
-                                onClick={() => handleTabClick('Learning')}
-                            >
-                                Learning
-                            </button>
-                        </li> <li className="nav-item me-2">
-                            <button
-                                className={`nav-link ${activeTab === 'Specialneeds' ? 'active' : ''}`}
-                                onClick={() => handleTabClick('Specialneeds')}
-                            >
-                                Special needs
-                            </button>
-                        </li>
-                    </ul>
+                {/* <div className="d-flex justify-content">
+                    <div>
+                        <ul className="nav nav-pills nav-fill">
+                            <li className="nav-item me-2">
+                                <button
+                                    className={`nav-link ${activeTab === 'All' ? 'active' : ''}`}
+                                    onClick={() => handleTabClick('All')}
+                                >
+                                    All
+                                </button>
+                            </li>
+                            <li className="nav-item me-2">
+                                <button
+                                    className={`nav-link ${activeTab === 'Assessment' ? 'active' : ''}`}
+                                    onClick={() => handleTabClick('Assessment')}
+                                >
+                                    Assessment
+                                </button>
+                            </li>
+                            <li className="nav-item me-2">
+                                <button
+                                    className={`nav-link ${activeTab === 'Summarizer' ? 'active' : ''}`}
+                                    onClick={() => handleTabClick('Summarizer')}
+                                >
+                                    Summarizer
+                                </button>
+                            </li>
+                            <li className="nav-item me-2">
+                                <button
+                                    className={`nav-link ${activeTab === 'Gamification' ? 'active' : ''}`}
+                                    onClick={() => handleTabClick('Gamification')}
+                                >
+                                    Gamification
+                                </button>
+                            </li>
+                            <li className="nav-item me-2">
+                                <button
+                                    className={`nav-link ${activeTab === 'Planner' ? 'active' : ''}`}
+                                    onClick={() => handleTabClick('Planner')}
+                                >
+                                    Planner
+                                </button>
+                            </li>
+                            <li className="nav-item me-2">
+                                <button
+                                    className={`nav-link ${activeTab === 'Learning' ? 'active' : ''}`}
+                                    onClick={() => handleTabClick('Learning')}
+                                >
+                                    Learning
+                                </button>
+                            </li> <li className="nav-item me-2">
+                                <button
+                                    className={`nav-link ${activeTab === 'Specialneeds' ? 'active' : ''}`}
+                                    onClick={() => handleTabClick('Specialneeds')}
+                                >
+                                    Special needs
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <form className="d-flex justify-content-right">
+                        <input className="form-control me-2" type="text" placeholder="Search" />
+                        <button className="btn btn-outline-dark" type="button">Search</button>
+                    </form>
+                </div> */}
+                <div className="d-flex justify-content-between align-items-center">
+                    <div>
+                        <ul className="nav nav-pills nav-fill">
+                            <li className="nav-item me-2">
+                                <button
+                                    className={`nav-link ${activeTab === 'All' ? 'active' : ''}`}
+                                    onClick={() => handleTabClick('All')}
+                                >
+                                    All
+                                </button>
+                            </li>
+                            <li className="nav-item me-2">
+                                <button
+                                    className={`nav-link ${activeTab === 'Assessment' ? 'active' : ''}`}
+                                    onClick={() => handleTabClick('Assessment')}
+                                >
+                                    Assessment
+                                </button>
+                            </li>
+                            <li className="nav-item me-2">
+                                <button
+                                    className={`nav-link ${activeTab === 'Summarizer' ? 'active' : ''}`}
+                                    onClick={() => handleTabClick('Summarizer')}
+                                >
+                                    Summarizer
+                                </button>
+                            </li>
+                            <li className="nav-item me-2">
+                                <button
+                                    className={`nav-link ${activeTab === 'Gamification' ? 'active' : ''}`}
+                                    onClick={() => handleTabClick('Gamification')}
+                                >
+                                    Gamification
+                                </button>
+                            </li>
+                            <li className="nav-item me-2">
+                                <button
+                                    className={`nav-link ${activeTab === 'Planner' ? 'active' : ''}`}
+                                    onClick={() => handleTabClick('Planner')}
+                                >
+                                    Planner
+                                </button>
+                            </li>
+                            <li className="nav-item me-2">
+                                <button
+                                    className={`nav-link ${activeTab === 'Learning' ? 'active' : ''}`}
+                                    onClick={() => handleTabClick('Learning')}
+                                >
+                                    Learning
+                                </button>
+                            </li>
+                            <li className="nav-item me-2">
+                                <button
+                                    className={`nav-link ${activeTab === 'Specialneeds' ? 'active' : ''}`}
+                                    onClick={() => handleTabClick('Specialneeds')}
+                                >
+                                    Special needs
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <form className="d-flex justify-content-end">
+                        <input className="form-control me-2" type="text" placeholder="Search" />
+                        <button className="btn btn-outline-dark" type="button">Search</button>
+                    </form>
                 </div>
                 <hr />
                 <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 py-5">

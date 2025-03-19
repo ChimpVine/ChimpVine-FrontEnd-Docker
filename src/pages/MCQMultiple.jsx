@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaCheck } from "react-icons/fa";
 
-const MCQMultiple = ({ worksheet, answers, modalVisible, handleUpdate, setApiResponse }) => {
+const MCQMultiple = ({ worksheet, answers, modalVisible, handleUpdate, setApiResponse, setModalVisible }) => {
   const [errors, setErrors] = useState({}); // State to store validation errors
 
   // Validation function to check for empty questions and options
@@ -90,6 +90,10 @@ const MCQMultiple = ({ worksheet, answers, modalVisible, handleUpdate, setApiRes
     }));
   };
 
+  const handleCloseModal = () => {
+    setModalVisible(false);
+  };
+
   return (
     <>
       <h5 className='mb-4'>
@@ -127,6 +131,7 @@ const MCQMultiple = ({ worksheet, answers, modalVisible, handleUpdate, setApiRes
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title">Edit Worksheet</h5>
+                  <button type="button" className="btn-close" aria-label="Close" onClick={handleCloseModal}></button>
                 </div>
                 <div className="modal-body" style={{ maxHeight: '70vh', overflowY: 'auto' }}>
                   {worksheet.map((item, index) => (

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ShortAnswerList = ({ worksheet, lineStyle, AdditionalStyle, handleUpdate, setApiResponse, modalVisible }) => {
+const ShortAnswerList = ({ worksheet, lineStyle, AdditionalStyle, handleUpdate, setApiResponse, modalVisible,setModalVisible }) => {
   const [errors, setErrors] = useState({}); // State to store validation errors
 
   // Validation function to check for empty questions
@@ -43,6 +43,10 @@ const ShortAnswerList = ({ worksheet, lineStyle, AdditionalStyle, handleUpdate, 
     });
   };
 
+  const handleCloseModal = () => {
+    setModalVisible(false);
+  };
+
   return (
     <div>
       <h4 className="mb-3"><strong>Short Answer List</strong></h4>
@@ -73,6 +77,7 @@ const ShortAnswerList = ({ worksheet, lineStyle, AdditionalStyle, handleUpdate, 
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title">Edit Short Answer List Worksheet</h5>
+                  <button type="button" className="btn-close" aria-label="Close" onClick={handleCloseModal}></button>
                 </div>
                 <div className="modal-body" style={{ maxHeight: '70vh', overflowY: 'auto' }}>
                   {worksheet.map((item, index) => (

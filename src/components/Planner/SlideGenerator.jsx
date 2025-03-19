@@ -332,7 +332,7 @@ export default function SlideGenerator({ BASE_URL }) {
                                                 name="title"
                                                 value={formData.title}
                                                 onChange={handleChange}
-                                                placeholder="For eg. The Wildlife of the United States"
+                                                placeholder="e.g. The Wildlife of the United States"
                                             />
 
                                             <label htmlFor="objective" className="form-label">
@@ -348,7 +348,7 @@ export default function SlideGenerator({ BASE_URL }) {
                                                 value={formData.objective}
                                                 onChange={handleChange}
                                                 rows={4}
-                                                placeholder="For eg. Discover the diverse wildlife found in different regions of America. Learn about animals like the American bison, bald eagle, and grizzly bear. Explore the importance of preserving habitats and biodiversity."
+                                                placeholder="e.g. Discover the diverse wildlife found in different regions of America. Learn about animals like the American bison, bald eagle, and grizzly bear. Explore the importance of preserving habitats and biodiversity."
                                             />
 
                                             <label htmlFor="slide_number" className="form-label">

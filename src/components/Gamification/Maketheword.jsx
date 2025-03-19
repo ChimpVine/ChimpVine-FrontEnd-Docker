@@ -122,7 +122,7 @@ export default function Maketheword({ BASE_URL }) {
                                                 className={`form-control form-control-sm mb-2 ${errors.theme ? 'is-invalid' : ''}`}
                                                 id="theme"
                                                 {...register('theme', { required: 'Theme is required' })}
-                                                placeholder="Enter Theme For E.g. Animals, Foods, Planets"
+                                                placeholder="Enter theme (e.g. Animals, Foods, Planets)"
                                             />
                                             {errors.theme && <div className="invalid-feedback">{errors.theme.message}</div>}
                                         </div>
@@ -233,16 +233,13 @@ const renderWordGame = (apiResponse, showAnswers) => {
 
     return (
         <div className="container-fluid mt-3 mb-2 ps-5 pe-5 print-content">
-            <div id="headerContent" className='mt-4'>
-                <div className="d-flex justify-content-center mt-3">
-                    <h2 className='mb-5'>Your High School Name</h2>
-                </div>
+            <div id="headerContent" className='section'>
                 <div className="d-flex justify-content-between mt-5 mb-5">
                     <h5>Name : <span style={nameStyle}></span></h5>
                     <h5 className='me-3'>Date :  <span style={dateStyle}></span></h5>
                 </div>
             </div>
-            <h4 style={headingStyle}><strong>Generated Make the Word</strong></h4>
+            <h4 style={headingStyle}><strong>Make the Word</strong></h4>
             <section className='mb-5'>
                 <p><strong>Theme:</strong> {apiResponse.theme}</p>
                 <p><strong>Difficulty:</strong> {apiResponse.difficulty}</p>

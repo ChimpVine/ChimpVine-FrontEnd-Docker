@@ -253,7 +253,7 @@ export default function SatMath({ BASE_URL }) {
                 </div>
               ))}
               <div className="text-center mt-4">
-                <button className="btn btn-sm mt-2 mb-3 me-2 no-print"
+                <button className="btn btn-sm mt-2 me-2 no-print"
                   style={btnStyle}
                   onClick={() => {
                     setApiResponse(null);

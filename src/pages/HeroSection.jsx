@@ -1,16 +1,15 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-export default function HeroSection() { 
+export default function HeroSection() {
 
     return (
         <>
-
             <div className="container">
                 {/* Title Section */}
                 <div className="text-center py-5">
                     <h2 className='fw-bold'>
-                        Teachers, Our tools help you in achieving your goals faster and easier!
+                        Teachers, our tools help you in achieving your goals faster and easier!
                     </h2>
                     <p className="lead">Here's how it works</p>
                 </div>
@@ -20,7 +19,7 @@ export default function HeroSection() {
                         <div className="col-md-5">
                             <h1 className="display-1 fw-bold" style={{ color: "#69A2D9" }}>01</h1>
                             <h4>Select any of our tools</h4>
-                            <p className='text-muted me-4' style={{ textAlign: "justify" }}>We provide AI (Artificial Intelligence) for teachers as well as students. Our Teacher Toolkit helps educators generate lesson plans, assessments, rubric as well as fun activities among many other things. We also have AI Tools for students which can help them with their homework, and provide assistance when required.
+                            <p className='text-muted me-4' style={{ textAlign: "justify" }}>We provide AI (Artificial Intelligence) tools for teachers as well as students. Our Teacher Toolkit helps teachers generate lesson plans, assessments, rubric, as well as fun activities among many other things. We also have AI Tools for students, which can help them with their homework, and provide assistance when required.
                             </p>
                         </div>
                         <div className="col-md-7 border border-primary border-one rounded p-2">
@@ -49,7 +48,7 @@ export default function HeroSection() {
                         <div className="col-md-5" style={{ textAlign: "right" }}>
                             <h1 className="display-1 fw-bold" style={{ color: "#B2FBA5" }}>02</h1>
                             <h4>Choose your preferences and generate</h4>
-                            <p className='text-muted ms-4' style={{ textAlign: "justify" }}>We understand that without the right prompt, using AI can actually take up more time. So, we save you from the hassle, all you need to do is choose from the variety of the options we provide! Simple and Easy!
+                            <p className='text-muted ms-4' style={{ textAlign: "justify" }}>We understand that without a proper prompt, using AI can actually take up more time. So, we save you from the hassle; all you need to do is choose from the variety of AI tools we provide! It’s simple and easy!
                             </p>
                         </div>
                     </div>
@@ -76,7 +75,7 @@ export default function HeroSection() {
                 </div>
             </div>
             <div className="container p-5 mb-5">
-                <h2 className="fw-bold mb-5 text-center">Frequently Asked Questions (FAQ's)</h2>
+                <h2 className="fw-bold mb-5 text-center">Frequently Asked Questions (FAQs)</h2>
                 <div className="row justify-content-center">
                     <div className="col-md-6">
                         <div className="accordion" id="faqAccordionLeft">
@@ -127,7 +126,7 @@ export default function HeroSection() {
                                     data-bs-parent="#faqAccordionLeft"
                                 >
                                     <div className="accordion-body">
-                                        AI is being used in teaching to personalize learning experiences, automate grading, and enhance classroom management. It helps educators tailor lessons to individual student needs, provides real-time feedback, and streamline administrative tasks.
+                                        AI is being used in teaching to personalize learning experiences, automate grading, and enhance classroom management. It helps educators tailor lessons to individual student needs, provides real-time feedback, and streamlines administrative tasks.
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +142,7 @@ export default function HeroSection() {
                                         aria-expanded="false"
                                         aria-controls="collapseThreeLeft"
                                     >
-                                        What are the main features of your AI Toolkit?
+                                        What are the main features of our AI Toolkit?
                                     </button>
                                 </h2>
                                 <div
@@ -153,7 +152,8 @@ export default function HeroSection() {
                                     data-bs-parent="#faqAccordionLeft"
                                 >
                                     <div className="accordion-body">
-                                        Our AI Toolkit includes Lesson Plan Generator, Rubric Generator, Quiz Generator, Worksheet Generator, Workbook Generator, designed to enhance teaching efficiency and improve student outcomes.
+                                        Our AI Toolkit includes Lesson Plan Generator, Rubric Generator, Quiz Generator, Worksheet Generator, and Workbook Generator, designed to enhance teaching efficiency and improve student performance.
+
                                     </div>
                                 </div>
                             </div>
@@ -193,7 +193,7 @@ export default function HeroSection() {
                                         aria-expanded="false"
                                         aria-controls="collapseFifthLeft"
                                     >
-                                        Where can I find tutorials for using your tools?
+                                        Where can I find tutorials for using our tools?
                                     </button>
                                 </h2>
                                 <div
@@ -203,7 +203,7 @@ export default function HeroSection() {
                                     data-bs-parent="#faqAccordionLeft"
                                 >
                                     <div className="accordion-body">
-                                        Tutorials are available on our website, providing step-by-step instructions for maximizing the effectiveness of our tools.
+                                        Tutorials are located at the homepage of our website, providing step-by-step instructions to help you maximize the effectiveness of our tools
                                     </div>
                                 </div>
                             </div>
@@ -300,7 +300,7 @@ export default function HeroSection() {
                                         aria-expanded="false"
                                         aria-controls="collapseFourRight"
                                     >
-                                        Are your tools available in multiple languages?
+                                        Are our tools available in multiple languages?
                                     </button>
                                 </h2>
                                 <div
@@ -310,7 +310,7 @@ export default function HeroSection() {
                                     data-bs-parent="#faqAccordionRight"
                                 >
                                     <div className="accordion-body">
-                                        Currently, we do have options to generate the output in English, Spanish and Thai. We are working on providing multilingual support to ensure accessibility for diverse educational environments.
+                                        We currently offer output generation in English, Spanish, and Thai. We are actively working on expanding multilingual support to enhance accessibility for diverse educational environments.
                                     </div>
                                 </div>
                             </div>
@@ -325,7 +325,7 @@ export default function HeroSection() {
                                         aria-expanded="false"
                                         aria-controls="collapseFifthRight"
                                     >
-                                        How can we suggest new features for your tools?
+                                        How can you suggest new features for our tools?
                                     </button>
                                 </h2>
                                 <div
@@ -335,9 +335,9 @@ export default function HeroSection() {
                                     data-bs-parent="#faqAccordionRight"
                                 >
                                     <div className="accordion-body">
-                                        Educators can provide feedback and feature suggestions through the <NavLink 
-                                        to='/contact-us'>
-                                        ‘Contact Us’</NavLink> button on our website.
+                                        Educators can provide feedback and feature suggestions through the <NavLink
+                                            to='https://site.chimpvine.com/contact-us/' target='_blank' >
+                                            ‘Contact Us’</NavLink> button on our website.
                                     </div>
                                 </div>
                             </div>

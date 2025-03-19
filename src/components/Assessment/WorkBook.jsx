@@ -237,12 +237,12 @@ export default function WorkBook({ BASE_URL }) {
                                             />
 
                                             <label htmlFor="textarea" className="form-label">
-                                                Your Topic <span style={{ color: 'red' }}>*</span>
+                                                Topic <span style={{ color: 'red' }}>*</span>
                                             </label>
                                             <textarea
                                                 type="text"
                                                 className="form-control form-control-sm mb-2"
-                                                placeholder="Briefly describe the file you are uploading (e.g., Arithmetic, History, or Ancient Egypt)"
+                                                placeholder="Briefly describe the file you are uploading (e.g. Arithmetic, History, or Ancient Egypt)"
 
                                                 id="textarea"
                                                 name="textarea"
@@ -313,10 +313,7 @@ const parseWorkbook = (workbook) => {
 
     return (
         <div className="container-fluid mt-3 mb-2 ps-5 pe-5 print-content">
-            <div className='mt-4'>
-                <div className="d-flex justify-content-center mt-3">
-                    <h2 className='mb-5'>Your High School Name</h2>
-                </div>
+            <div className='section'>
                 <div className="d-flex justify-content-between mt-5 mb-5">
                     <h5>Name : <span style={nameStyle}></span></h5>
                     <h5 className='me-3'>Date :  <span style={dateStyle}></span></h5>

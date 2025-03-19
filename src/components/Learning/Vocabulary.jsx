@@ -188,7 +188,7 @@ export default function VocabularyPlan({ BASE_URL }) {
                                 <NavBreadcrumb items={breadcrumbItems} />
                                 <div className="col-md-5 border border-4 rounded-3 pt-4 pb-3 ps-5 pe-5 shadow p-3 bg-body rounded no-print">
                                     <form onSubmit={handleSubmit}>
-                                        <h4 className="text-center mb-3">Vocabulary Generator</h4>
+                                        <h4 className="text-center mb-3">Vocabulary Builder</h4>
                                         <div className="mb-2">
                                             <label htmlFor="subject" className="form-label">
                                                 Subject <span style={{ color: 'red' }}>*</span>
@@ -272,8 +272,8 @@ export default function VocabularyPlan({ BASE_URL }) {
                                                 name="topic"
                                                 value={formData.topic}
                                                 onChange={handleChange}
-                                                disabled={isLoading}
-                                                placeholder="Enter Vocabulary Topic For eg.Force , Algebra or Ancient Egypt"
+                                                disabled={isLoading} 
+                                                placeholder="Enter topic (e.g. Force, Algebra, or Ancient Egypt)"
                                             />
                                         </div>
 
@@ -303,7 +303,8 @@ export default function VocabularyPlan({ BASE_URL }) {
                         ) : (
                             <div className="mt-3" ref={contentRef}>
                                 {renderVocabulary(apiResponse)}
-                                <button className="btn btn-sm mt-2 mb-3 me-2 no-print" style={btnStyle} onClick={() => setApiResponse(null)}>                                    <FaArrowLeft /> Generate Another Vocabulary
+                                <button className="btn btn-sm mt-2 mb-3 me-2 no-print" style={btnStyle} onClick={() => setApiResponse(null)}>
+                                    <FaArrowLeft /> Generate Another Vocabulary
                                 </button>
                                 <button className="btn btn-sm mt-2 mb-3 no-print" style={pdfStyle} onClick={handlePrint}>
                                     <FaRegFilePdf /> View PDF
@@ -335,10 +336,7 @@ const renderVocabulary = (vocabularyData) => {
     };
     return (
         <div className="container-fluid mt-3 mb-2 ps-5 pe-5 print-content">
-            <div className='mt-4'>
-                <div className="d-flex justify-content-center mt-3">
-                    <h2 className='mb-5'>Your High School Name</h2>
-                </div>
+            <div className='section'>
                 <div className="d-flex justify-content-between mt-5 mb-5">
                     <h5>Name : <span style={nameStyle}></span></h5>
                     <h5 className='me-3'>Date :  <span style={dateStyle}></span></h5>

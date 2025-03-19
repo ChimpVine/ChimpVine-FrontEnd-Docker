@@ -163,7 +163,7 @@ export default function FunMath({ BASE_URL }) {
                                                 type="text"
                                                 className={`form-control form-control-sm ${errors.math_topic ? 'is-invalid' : ''}`}
                                                 id="math_topic"
-                                                placeholder="Enter math topic (e.g., Fractions, Algebra)"
+                                                placeholder="Enter math topic (e.g. Fractions, Algebra)"
                                                 {...register('math_topic', { required: 'Math topic is required' })}
                                             />
                                             {errors.math_topic && <div className="invalid-feedback">{errors.math_topic.message}</div>}
@@ -177,7 +177,7 @@ export default function FunMath({ BASE_URL }) {
                                                 type="text"
                                                 className={`form-control form-control-sm ${errors.interest ? 'is-invalid' : ''}`}
                                                 id="interest"
-                                                placeholder="Enter interest (e.g., Space, Sports)"
+                                                placeholder="Enter interest (e.g. Space, Sports)"
                                                 {...register('interest', { required: 'Interest is required' })}
                                             />
                                             {errors.interest && <div className="invalid-feedback">{errors.interest.message}</div>}

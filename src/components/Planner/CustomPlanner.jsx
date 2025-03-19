@@ -204,7 +204,7 @@ export default function LessonPlan() {
                                             <textarea
                                                 type="text"
                                                 className="form-control form-control-sm mb-2"
-                                                placeholder="Briefly describe the file you are uploading (e.g., Chapter 1 - The Solar System Notes, or Midterm Study Guide)"
+                                                placeholder="Briefly describe the file you are uploading (e.g. Chapter 1 - The Solar System Notes, or Midterm Study Guide)"
                                                 id="textarea"
                                                 name="textarea"
                                                 rows={3}

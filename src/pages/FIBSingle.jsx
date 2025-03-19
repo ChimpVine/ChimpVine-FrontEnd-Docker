@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const FIBSingle = ({ worksheet, answers, modalVisible, handleUpdate, setApiResponse }) => {
+const FIBSingle = ({ worksheet, answers, modalVisible, handleUpdate, setApiResponse, setModalVisible }) => {
   const [errors, setErrors] = useState({}); // State to store validation errors
 
   // Validation function to ensure no question or answer is empty
@@ -80,6 +80,10 @@ const FIBSingle = ({ worksheet, answers, modalVisible, handleUpdate, setApiRespo
     });
   };
 
+  const handleCloseModal = () => {
+    setModalVisible(false);
+  };
+
   return (
     <>
       <div>
@@ -106,6 +110,7 @@ const FIBSingle = ({ worksheet, answers, modalVisible, handleUpdate, setApiRespo
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title">Edit Fill-in-the-Blanks Worksheet</h5>
+                  <button type="button" className="btn-close" aria-label="Close" onClick={handleCloseModal}></button>
                 </div>
                 <div className="modal-body" style={{ maxHeight: "70vh", overflowY: "auto" }}>
                   {worksheet.question && worksheet.question.length > 0 && (

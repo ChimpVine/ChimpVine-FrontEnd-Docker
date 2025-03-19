@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const MatchTermDef = ({ worksheet, answers, modalVisible, handleUpdate, setApiResponse }) => {
+const MatchTermDef = ({ worksheet, answers, modalVisible, handleUpdate, setApiResponse, setModalVisible}) => {
   const [errors, setErrors] = useState({}); // State to store validation errors
 
   // Validation function to ensure no question, options, or answers are empty
@@ -110,6 +110,10 @@ const MatchTermDef = ({ worksheet, answers, modalVisible, handleUpdate, setApiRe
     });
   };
 
+  const handleCloseModal = () => {
+    setModalVisible(false);
+  };
+
   return (
     <>
       <div className="mb-5">
@@ -150,6 +154,7 @@ const MatchTermDef = ({ worksheet, answers, modalVisible, handleUpdate, setApiRe
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title">Edit Match Term & Definition Worksheet</h5>
+                   <button type="button" className="btn-close" aria-label="Close" onClick={handleCloseModal}></button>
                 </div>
                 <div className="modal-body" style={{ maxHeight: "70vh", overflowY: "auto" }}>
                   <div className="mb-3">

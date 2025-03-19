@@ -126,7 +126,7 @@ export default function JokesGenerator({ BASE_URL }) {
                                                 className={`form-control ${errors.topic ? 'is-invalid' : ''}`}
                                                 id="topic"
                                                 {...register('topic', { required: 'Topic is required.' })}
-                                                placeholder="Enter topic (e.g., Space, Animals)"
+                                                placeholder="Enter topic (e.g. Space, Animals)"
                                             />
                                             {errors.topic && <div className="invalid-feedback">{errors.topic.message}</div>}
 
@@ -170,9 +170,6 @@ export default function JokesGenerator({ BASE_URL }) {
                             <div className="mt-3">
                                 <div className='mb-5'>
                                     <div id="headerContent">
-                                        <div className="d-flex justify-content-center mt-3">
-                                            <h2 className='mb-5'>Your High School Name</h2>
-                                        </div>
                                         <div className="d-flex justify-content-between mt-5 mb-5">
                                             <h5>Name : <span style={nameStyle}></span></h5>
                                             <h5 className='me-3'>Date :  <span style={dateStyle}></span></h5>

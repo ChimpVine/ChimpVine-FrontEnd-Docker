@@ -86,6 +86,7 @@ export default function RoutingConfig() {
 
   ReactGA.initialize('G-TBNNYXX21K');
 
+
   return (
     <HelmetProvider>
       <Helmet>

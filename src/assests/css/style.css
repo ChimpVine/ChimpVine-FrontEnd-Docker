@@ -239,7 +239,7 @@ a:hover {
     resize: none;
 }
 
-@media print {
+/* @media print {
     @page {
         size: A4;
     }
@@ -258,6 +258,27 @@ a:hover {
 
     .print-content:not(:first-child) {
         margin-top: 1rem;
+    }
+
+    #bingo-container {
+        break-inside: avoid-page;
+
+    }
+} */
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0; 
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .no-print {
+        display: none !important;
     }
 
     #bingo-container {
@@ -430,4 +451,16 @@ math-field::part(menu-toggle) {
     .hover-overlay {
         opacity: 0.5 !important;
     }
+}
+
+.copyright{
+   color: #000000;
+}
+
+.danson_trademark{
+    color: #ffffff;
+}
+
+.danson_trademark:hover{
+    color: #FF683B !important;
 }

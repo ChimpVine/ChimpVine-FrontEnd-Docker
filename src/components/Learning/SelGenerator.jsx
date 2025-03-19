@@ -220,7 +220,7 @@ export default function SELGenerator({ BASE_URL }) {
                                         <textarea
                                             type="text"
                                             className="form-control form-control-sm mb-2"
-                                            placeholder="For eg. Self-awareness"
+                                            placeholder="e.g. Self-awareness"
                                             id="sel_topic"
                                             name="sel_topic"
                                             value={formData.sel_topic}
@@ -234,7 +234,7 @@ export default function SELGenerator({ BASE_URL }) {
                                         <textarea
                                             type="text"
                                             className="form-control form-control-sm mb-2"
-                                            placeholder="For eg. 1. Demonstrates an awareness and understanding of own emotions."
+                                            placeholder="e.g. 1. Demonstrates an awareness and understanding of own emotions."
                                             id="learning_objectives"
                                             name="learning_objectives"
                                             value={formData.learning_objectives}
@@ -304,10 +304,7 @@ const renderSELPlan = (selPlan) => {
 
     return (
         <div className="container-fluid mt-3 mb-2 ps-5 pe-5 print-content">
-            <div className="mt-4">
-                <div className="d-flex justify-content-center mt-3">
-                    <h2 className='mb-5'>Your High School Name</h2>
-                </div>
+            <div className="section">
                 <div className="d-flex justify-content-between mt-5 mb-5">
                     <h5>Name : <span style={nameStyle}></span></h5>
                     <h5 className='me-3'>Date :  <span style={dateStyle}></span></h5>

@@ -6,7 +6,8 @@ const LongAnswerExplain = ({
     AdditionalStyle, 
     handleUpdate, 
     setApiResponse, 
-    modalVisible 
+    modalVisible,
+    setModalVisible 
 }) => {
     const [errors, setErrors] = useState({}); // State to store validation errors
 
@@ -50,6 +51,10 @@ const LongAnswerExplain = ({
         });
     };
 
+    const handleCloseModal = () => {
+        setModalVisible(false);
+    };
+
     return (
         <div>
             <h4 className="mb-5"><strong>Long Answer Explanation</strong></h4>
@@ -89,6 +94,7 @@ const LongAnswerExplain = ({
                             <div className="modal-content">
                                 <div className="modal-header">
                                     <h5 className="modal-title">Edit Long Answer Explain Worksheet</h5>
+                                    <button type="button" className="btn-close" aria-label="Close" onClick={handleCloseModal}></button>
                                 </div>
                                 <div className="modal-body" style={{ maxHeight: '70vh', overflowY: 'auto' }}>
                                     {worksheet.map((item, index) => (

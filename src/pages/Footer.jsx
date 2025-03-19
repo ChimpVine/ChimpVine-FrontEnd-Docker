@@ -141,7 +141,8 @@ export default function Footer() {
                                 <li>
                                     <NavLink
                                         className="content"
-                                        to="/contact-us"
+                                        to="https://site.chimpvine.com/contact-us/"
+                                        target='_blank'  
                                     >
                                         Contact Us
                                     </NavLink>
@@ -152,7 +153,15 @@ export default function Footer() {
                     <hr />
                     <div className="row">
                         <div className="col-12 text-center">
-                            <p className='fw-bold'> Copyright &copy; 2024 | Product of ChimpVine</p>
+                            <p className='fw-bold copyright'> Copyright &copy; 2025 | Product of  
+                                <NavLink
+                                    to="https://dansonsolutions.com/"
+                                    target='_blank'
+                                    className='ms-2 danson_trademark'
+                                >
+                                     Danson Solutions
+                                </NavLink>
+                            </p>
                         </div>
                     </div>
                 </div>

@@ -96,7 +96,7 @@ const GetStarted = () => {
                         <div className="d-flex justify-content-center align-items-center flex-column text-center w-100">
                         <span className="mt-4s" style={fontStyle}>" This is a test site. "</span>
                             <h2 className="display-4 fw-bold mb-5 mt-5">
-                                <span style={textStyle}>AI Tools</span> For Teachers
+                                 Teacher's <span style={textStyle}>Assistant AI</span>
                             </h2>
                             <div>
                                 {/* <h6 className="display-6 fw-bold mb-4">

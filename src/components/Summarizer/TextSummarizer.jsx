@@ -109,13 +109,13 @@ export default function TextSummarizer({ BASE_URL }) {
                                     <form onSubmit={handleSubmit(onSubmit)}>
                                         <h4 className="text-center mb-3">Text Summarizer</h4>
                                         <div className="mb-3">
-                                            <label htmlFor="text" className="form-label-sm">Your Text Input<span style={{ color: 'red' }}>*</span></label>
+                                            <label htmlFor="text" className="form-label-sm">Text Input<span style={{ color: 'red' }}>*</span></label>
                                             <textarea
                                                 className={`form-control form-control-sm resizeStyle ${errors.text ? 'is-invalid' : ''}`}
                                                 id="text"
                                                 name="text"
                                                 rows="10"
-                                                placeholder="Enter the text you want to summarize For Eg.On a misty morning, the purple sky reflected a thousand shimmering stars, though the sun was only moments away from rising. The forest below buzzed with life, and the distant call of a bird echoed across the valley. Amidst the tall trees, an old stone path led to a forgotten garden, overgrown with ivy and wildflowers. The scent of rain lingered in the air, mixing with the earthy fragrance of the moss-covered stones. A single leaf fluttered down, landing softly on the surface of a quiet, hidden pond."
+                                                placeholder="Enter the text you want to summarize (e.g. On a misty morning, the purple sky reflected a thousand shimmering stars, though the sun was only moments away from rising. The forest below buzzed with life, and the distant call of a bird echoed across the valley. Amidst the tall trees, an old stone path led to a forgotten garden, overgrown with ivy and wildflowers. The scent of rain lingered in the air, mixing with the earthy fragrance of the moss-covered stones. A single leaf fluttered down, landing softly on the surface of a quiet, hidden pond.)"
                                                 disabled={isLoading}
                                                 {...register('text', {
                                                     required: 'Text is required',
@@ -133,7 +133,7 @@ export default function TextSummarizer({ BASE_URL }) {
                                         </div>
 
                                         <div className="mb-3">
-                                            <label htmlFor="summary_format" className="form-label-sm">Your Text Format <span style={{ color: 'red' }}>*</span></label>
+                                            <label htmlFor="summary_format" className="form-label-sm">Text Format <span style={{ color: 'red' }}>*</span></label>
                                             <select
                                                 className={`form-select form-select-sm mb-3 ${errors.summary_format ? 'is-invalid' : ''}`}
                                                 id="summary_format"
@@ -200,7 +200,7 @@ export default function TextSummarizer({ BASE_URL }) {
 
 const renderTextSummarizer = (apiResponse) => {
     try {
-        const { text_title, summary } = apiResponse; // Access fields directly from apiResponse
+        const { text_title, summary } = apiResponse; 
         return (
             <div>
                 <h4>Title: {text_title}</h4>

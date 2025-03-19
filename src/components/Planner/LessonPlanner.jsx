@@ -42,18 +42,18 @@ const grades = [
 
 const lessonDurations = [
     { value: "", label: "Choose the Duration" },
-    { value: "15", label: "15 minutes" },
-    { value: "30", label: "30 minutes" },
-    { value: "45", label: "45 minutes" },
-    { value: "60", label: "1 hour" },
-    { value: "75", label: "1 hour 15 minutes" },
-    { value: "90", label: "1 hour 30 minutes" },
-    { value: "105", label: "1 hour 45 minutes" },
-    { value: "120", label: "2 hours" },
-    { value: "135", label: "2 hours 15 minutes" },
-    { value: "150", label: "2 hours 30 minutes" },
-    { value: "165", label: "2 hours 45 minutes" },
-    { value: "180", label: "3 hours" }
+    { value: "15 minutes", label: "15 minutes" },
+    { value: "30 minutes", label: "30 minutes" },
+    { value: "45 minutes", label: "45 minutes" },
+    { value: "1 hour", label: "1 hour" },
+    { value: "1 hour 15 minutes", label: "1 hour 15 minutes" },
+    { value: "1 hour 30 minutes", label: "1 hour 30 minutes" },
+    { value: "1 hour 45 minutes", label: "1 hour 45 minutes" },
+    { value: "2 hours", label: "2 hours" },
+    { value: "2 hours 15 minutes", label: "2 hours 15 minutes" },
+    { value: "2 hours 30 minutes", label: "2 hours 30 minutes" },
+    { value: "2 hours 45 minutes", label: "2 hours 45 minutes" },
+    { value: "3 hours", label: "3 hours" }
 ];
 
 export default function LessonPlan({ BASE_URL }) {
@@ -267,7 +267,7 @@ export default function LessonPlan({ BASE_URL }) {
                                             <textarea
                                                 type="text"
                                                 className="form-control form-control-sm mb-2"
-                                                placeholder="Briefly describe the file you are uploading (e.g., Chapter 1 - The Solar System Notes, or Midterm Study Guide)"
+                                                placeholder="Briefly describe the file you are uploading (e.g. Chapter 1 - The Solar System Notes, or Midterm Study Guide)"
                                                 id="textarea"
                                                 name="textarea"
                                                 rows={3}
@@ -343,10 +343,7 @@ const renderLessonPlan = (lessonPlan) => {
 
     return (
         <div className="container-fluid mt-3 mb-2 ps-5 pe-5 print-content">
-            <div className='mt-4'>
-                <div className="d-flex justify-content-center mt-3">
-                    <h2 className='mb-5'>Your High School Name</h2>
-                </div>
+            <div className='section'>
                 <div className="d-flex justify-content-between mt-5 mb-5">
                     <h5>Name : <span style={nameStyle}></span></h5>
                     <h5 className='me-3'>Date :  <span style={dateStyle}></span></h5>

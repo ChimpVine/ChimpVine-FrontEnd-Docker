@@ -112,7 +112,7 @@ export default function MysteryGameGenerator({BASE_URL}) {
                                                 className={`form-control ${errors.case_study_topic ? 'is-invalid' : ''}`}
                                                 id="case_study_topic"
                                                 {...register('case_study_topic', { required: 'Topic is required.' })}
-                                                placeholder="Enter topic (e.g., Space, Animals)"
+                                                placeholder="Enter topic (e.g. Space, Animals)"
                                             />
                                             {errors.case_study_topic && (
                                                 <div className="invalid-feedback">{errors.case_study_topic.message}</div>

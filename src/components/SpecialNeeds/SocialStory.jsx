@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 // Special needs options
 const needs = [
-    { value: "", label: "Choose your needs" },
+    { value: "", label: "Choose Special Need" },
     { value: "ASD", label: "ASD (Autism spectrum disorder)" },
     { value: "ADHD", label: "ADHD (Attention deficit hyperactivity disorder)" }
 ];
@@ -149,10 +149,7 @@ export default function SocialStory({ BASE_URL }) {
 
         return (
             <div className="container-fluid mt-3 mb-3 ps-5 pe-5 print-content">
-                <div className="mt-4">
-                    <div className="d-flex justify-content-center mt-3">
-                        <h2 className='mb-5'>Your High School Name</h2>
-                    </div>
+                <div className="section">
                     <div className="d-flex justify-content-between mt-5 mb-5">
                         <h5>Name : <span style={nameStyle}></span></h5>
                         <h5 className='me-3'>Date :  <span style={dateStyle}></span></h5>
@@ -200,7 +197,7 @@ export default function SocialStory({ BASE_URL }) {
                                                 value={formData.child_name}
                                                 onChange={handleChange}
                                                 disabled={isLoading}
-                                                placeholder="Eg. Alex"
+                                                placeholder="e.g. Alex"
                                             />
 
                                             <label htmlFor="child_age" className="form-label">
@@ -214,7 +211,7 @@ export default function SocialStory({ BASE_URL }) {
                                                 value={formData.child_age}
                                                 onChange={handleChange}
                                                 disabled={isLoading}
-                                                placeholder="Eg. 7"
+                                                placeholder="e.g. 7"
                                             />
 
                                             <label htmlFor="needs" className="form-label">
@@ -246,7 +243,7 @@ export default function SocialStory({ BASE_URL }) {
                                                 value={formData.scenario}
                                                 onChange={handleChange}
                                                 disabled={isLoading}
-                                                placeholder="For eg. Playing in the park"
+                                                placeholder="e.g. Playing in the park"
                                             />
 
                                             <label htmlFor="behavior_challenge" className="form-label">
@@ -260,7 +257,7 @@ export default function SocialStory({ BASE_URL }) {
                                                 value={formData.behavior_challenge}
                                                 onChange={handleChange}
                                                 disabled={isLoading}
-                                                placeholder="For eg. Finding it hard to wait for a turn"
+                                                placeholder="e.g. Finding it hard to wait for a turn"
                                             />
 
                                             <label htmlFor="ideal_behavior" className="form-label">
@@ -274,7 +271,7 @@ export default function SocialStory({ BASE_URL }) {
                                                 value={formData.ideal_behavior}
                                                 onChange={handleChange}
                                                 disabled={isLoading}
-                                                placeholder="For eg. Waiting patiently and taking turns"
+                                                placeholder="e.g. Waiting patiently and taking turns"
                                             />
                                         </div>
 

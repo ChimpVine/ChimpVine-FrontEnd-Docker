@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 
-const TFSimple = ({ worksheet, answers, modalVisible, handleUpdate, setApiResponse }) => {
+const TFSimple = ({ worksheet, answers, modalVisible, handleUpdate, setApiResponse, setModalVisible }) => {
   const [errors, setErrors] = useState({});
 
   const handleQuestionChange = (index, newQuestion) => {
@@ -52,6 +52,10 @@ const TFSimple = ({ worksheet, answers, modalVisible, handleUpdate, setApiRespon
     }
   };
 
+  const handleCloseModal = () => {
+    setModalVisible(false);
+  };
+
   return (
     <>
       <h5 className="mb-4">
@@ -89,6 +93,7 @@ const TFSimple = ({ worksheet, answers, modalVisible, handleUpdate, setApiRespon
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title">Edit Worksheet</h5>
+                  <button type="button" className="btn-close" aria-label="Close" onClick={handleCloseModal}></button>
                 </div>
                 <div className="modal-body" style={{ maxHeight: "70vh", overflowY: "auto" }}>
                   {worksheet.map((item, index) => (

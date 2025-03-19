@@ -173,7 +173,7 @@ export default function GroupWork({ BASE_URL }) {
                         type="text"
                         className={`form-control form-control-sm mb-2 ${errors.topic ? 'is-invalid' : ''}`}
                         id="topic"
-                        placeholder="Enter your topic for eg. Force , Algebra or Ancient Egypt"
+                        placeholder="Enter topic (e.g. Force, Algebra, or Ancient Egypt)"
                         {...register('topic', { required: 'Topic is required' })}
                       />
                       {errors.topic && <div className="invalid-feedback">{errors.topic.message}</div>}
@@ -185,7 +185,7 @@ export default function GroupWork({ BASE_URL }) {
                       <textarea
                         className={`form-control form-control-sm mb-2 ${errors.learning_objective ? 'is-invalid' : ''}`}
                         id="learning_objective"
-                        placeholder="Enter learning objectives for eg. Objectives focus on describing movement, observing changes in motion under varying forces, and understanding how mass affects the force needed for motion."
+                        placeholder="Enter learning objectives (e.g. Objectives focus on describing movement, observing changes in motion under varying forces, and understanding how mass affects the force needed for motion.)"
                         rows={3}
                         {...register('learning_objective', { required: 'Learning objective is required' })}
                       />
@@ -200,7 +200,7 @@ export default function GroupWork({ BASE_URL }) {
                         id="group_size"
                         {...register('group_size', { required: 'Group size is required' })}
                       >
-                        <option value="">Choose group size</option>
+                        <option value="">Choose Group Size</option>
                         {[2, 3, 4, 5].map((size) => (
                           <option key={size} value={size}>
                             {size}
@@ -271,10 +271,7 @@ const renderGroupWork = (apiResponse) => {
 
   return (
     <div className="container-fluid mt-3 mb-2 ps-5 pe-5 print-content">
-      <div id="headerContent" className="mt-4">
-        <div className="d-flex justify-content-center">
-          <h2 className="mb-5">Your High School Name</h2>
-        </div>
+      <div id="headerContent" className="section">
         <div className="d-flex justify-content-between mt-5 mb-5">
           <h5>Name : <span style={nameStyle}></span></h5>
           <h5 className="me-3">Date : <span style={dateStyle}></span></h5>

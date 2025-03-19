@@ -17,9 +17,12 @@ export default function Aboutus() {
     };
 
     const desStyle = {
+        fontWeight: '600'
+    };
+
+    const subStyle = {
         color: '#8F47D7',
         fontWeight: '600'
-
     };
 
     const iconStyle = {
@@ -61,7 +64,7 @@ export default function Aboutus() {
         },
         {
             title: 'Comprehensive AI Toolkit',
-            description: 'We offer a wide range of tools to meet every classroom need, from quizzes and group activities to lesson planning and grading rubrics. Our all-in-one toolkit for teachers is designed to support K-12 education, making it a versatile resource for any teaching environment.',
+            description: 'We offer a wide range of tools to meet every classroom need, from quizzes and group activities to lesson planning and grading rubrics. Our all-in-one toolkit for teachers is designed to support diverse teaching styles and needs, making it a valuable resource for any classroom setting, regardless of grade or teaching environment.',
         },
         {
             title: 'Accessible and User-Friendly',
@@ -77,12 +80,11 @@ export default function Aboutus() {
                 <div className="row align-items-center">
                     <div className="col-md-5 mt-4">
                         <header className="header">
-                            <h5 className="mb-2 fw-bold" style={textStyle}>How it Started</h5>
+                            <h5 className="mb-2 fw-bold" style={textStyle}>How It Started</h5>
                             <h2 className="fw-bold">AI Driven Tools for Inspired Teaching and Learning</h2>
                         </header>
                         <p className="mt-3 text-muted" style={paraStyle}>
-                            At ChimpVine AI, we believe that teaching should be inspiring, not overwhelming. We harness the power of AI to create intuitive tools that simplify lesson planning, assessment, and classroom engagement. Our mission is to empower
-                            educators and enrich student experiences by providing a seamless, innovative teaching toolkit designed for today's classrooms. Unlock your potential with ChimpVine AI where teaching meets technology.
+                            At ChimpVine AI, we believe that teaching should be inspiring, not overwhelming. We harness the power of AI to create intuitive tools that simplify lesson planning, assessment, and classroom engagement. Our mission is to empower educators and enrich student experiences by providing a seamless, innovative teaching toolkit designed for today's classrooms. Unlock your potential with ChimpVine AI where teaching meets technology.
                         </p>
                         <NavLink to="/ai-tools-for-teachers">
                             <button className='btn btn-md mt-3 me-2' style={btnStyle}>Go to AI Tools</button>
@@ -94,7 +96,7 @@ export default function Aboutus() {
                 </div>
             </div>
             <Container className="text-center my-5">
-                <h2 className="mb-4 fw-bold">Our Goals</h2>
+                <h2 className="mb-4 fw-bold" style={subStyle} >Our Goals</h2>
                 <Row className="justify-content-center" style={pointerStyle}>
                     {goals.map((goal, index) => (
                         <Col key={index} md={4} className="mb-4">
@@ -115,7 +117,7 @@ export default function Aboutus() {
                 <Row className="justify-content-center" style={pointerStyle}>
                     <Col md={4} className="d-flex flex-column justify-content-center">
                         <h2 className="fw-bold" style={{ fontSize: '2rem' }}>
-                            Why <span style={{ color: '#8F47D7' }}>Us</span>
+                            <span style={textStyle}> Why Us</span>
                         </h2>
                         <hr style={{ border: '2px solid #8F47D7', width: '75px' }} />
                         <p>
@@ -143,7 +145,7 @@ export default function Aboutus() {
                     We’re ready, are you?
                 </div>
                 <div className="mb-3" style={{ fontSize: '1.25rem', color: '#555' }}>
-                    Let’s chat about your goals and get started !
+                    We’d love to hear about your goals and help you get started.
                 </div>
                 <NavLink to="/contact-us">
                     <button className='btn btn-outline-dark btn-lg mt-3 me-2'>Contact Us</button>

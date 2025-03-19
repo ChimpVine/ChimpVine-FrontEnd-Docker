@@ -144,8 +144,8 @@ export default function WordPuzzle({ BASE_URL }) {
                                                 name="topic"
                                                 value={formData.topic}
                                                 onChange={handleChange}
-                                                disabled={isLoading}
-                                                placeholder="Enter Word Puzzle Topic For eg. Animals,Foods"
+                                                disabled={isLoading}  
+                                                placeholder="Enter topic (e.g. Force, Algebra, or Ancient Egypt)"
                                             />
 
                                             <label htmlFor="numberofword" className="form-label">
@@ -257,10 +257,7 @@ const renderWordPuzzle = (wordPuzzleData) => {
 
     return (
         <div className="container-fluid mt-3 mb-2 ps-5 pe-5 print-content">
-            <div id="headerContent" className='mt-4'>
-                <div className="d-flex justify-content-center mt-3">
-                    <h2 className='mb-5'>Your High School Name</h2>
-                </div>
+            <div id="headerContent" className='section'>
                 <div className="d-flex justify-content-between mt-5 mb-5">
                     <h5>Name : <span style={nameStyle}></span></h5>
                     <h5 className='me-3'>Date :  <span style={dateStyle}></span></h5>

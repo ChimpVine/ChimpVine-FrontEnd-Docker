@@ -94,33 +94,62 @@ const QuizUI = ({ BASE_URL }) => {
     };
 
     const validateInput = () => {
+        const noSpacesRegex = /^\S+$/; // No spaces allowed
+        const noNumbersRegex = /^[^0-9]+$/; // No numbers allowed
+        const noSymbolsRegex = /^[a-zA-Z]+$/; // Only letters allowed, no symbols
+    
         if (!inputData.subject.trim()) {
             toast.warning('Please enter a subject.');
             return false;
         }
-
+        if (!noSpacesRegex.test(inputData.subject)) {
+            toast.warning('Subject should not contain spaces.');
+            return false;
+        }
+        if (!noNumbersRegex.test(inputData.subject)) {
+            toast.warning('Subject should not contain numbers.');
+            return false;
+        }
+        if (!noSymbolsRegex.test(inputData.subject)) {
+            toast.warning('Subject should not contain symbols.');
+            return false;
+        }
+    
         if (!inputData.topic.trim()) {
             toast.warning('Please enter a topic.');
             return false;
         }
-
+        if (!noSpacesRegex.test(inputData.topic)) {
+            toast.warning('Topic should not contain spaces.');
+            return false;
+        }
+        if (!noNumbersRegex.test(inputData.topic)) {
+            toast.warning('Topic should not contain numbers.');
+            return false;
+        }
+        if (!noSymbolsRegex.test(inputData.topic)) {
+            toast.warning('Topic should not contain symbols.');
+            return false;
+        }
+    
         if (!inputData.difficulty.trim()) {
             toast.warning('Please select a difficulty.');
             return false;
         }
-
+    
         if (!inputData.language.trim()) {
             toast.warning('Please select a language.');
             return false;
         }
-
+    
         if (parseInt(inputData.numberOfQuestions) !== 10) {
             toast.warning('Number of questions should be exactly 10.');
-            return;
+            return false;
         }
-
+    
         return true;
     };
+    
 
     const handleGenerateQuiz = async () => {
         if (!validateInput()) {
@@ -349,7 +378,6 @@ const QuizUI = ({ BASE_URL }) => {
             <NavBar />
             <div className="container">
                 <div className="row justify-content-center mt-5 mb-4">
-                    
                     <div className="col-md-6 border border-4 rounded-3 pt-4 pb-3 ps-5 pe-5 shadow p-3 bg-body rounded">
                         {loading ? (
                             <div className="text-center">
@@ -372,7 +400,7 @@ const QuizUI = ({ BASE_URL }) => {
                                         value={inputData.subject}
                                         onChange={handleInputChange}
                                         disabled={loading}
-                                        placeholder="Enter your subject for eg. Science , Mathematics or History"
+                                        placeholder="Enter subject (e.g. Science , Mathematics or History)"
                                     />
 
                                     <label htmlFor="topic" className="form-label">
@@ -384,9 +412,9 @@ const QuizUI = ({ BASE_URL }) => {
                                         id="topic"
                                         name="topic"
                                         value={inputData.topic}
-                                        onChange={handleInputChange}
+                                        onChange={handleInputChange} 
                                         disabled={loading}
-                                        placeholder="Enter your topic for eg. Force , Algebra or Ancient Egypt"
+                                        placeholder="Enter topic (e.g. Force, Algebra, or Ancient Egypt)"
                                     />
 
                                     <label htmlFor="difficulty" className="form-label">
@@ -463,7 +491,7 @@ const QuizUI = ({ BASE_URL }) => {
                                 {currentQuestions.length > 0 && (
                                     <>
                                         <div>
-                                            <div className="d-flex justify-content-center mb-2 fw-bold" style={{ color: "red" }}>To regenerate any Q/A: You have only {regenerationAttempts} attempt !</div>
+                                            <div className="d-flex justify-content-center mb-2 fw-bold" style={{ color: "red" }}>To regenerate any Question and Answer: You only have {regenerationAttempts} attempt!</div>
                                             {currentQuestions.map((question, index) => (
                                                 <div key={index} className="card mb-3">
                                                     <div className="card-header">
@@ -584,7 +612,7 @@ const QuizUI = ({ BASE_URL }) => {
                                         style={cancelStyle}
                                         onClick={handleCancel}
                                     >
-                                        Cancel
+                                        Reset
                                     </button>
                                 </div>
                             </div>

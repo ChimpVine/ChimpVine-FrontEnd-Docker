@@ -116,7 +116,7 @@ export default function BingoGenerator({ BASE_URL }) {
                                                 className={`form-control ${errors.topic ? 'is-invalid' : ''}`}
                                                 id="topic"
                                                 {...register('topic', { required: 'Topic is required.' })}
-                                                placeholder="Enter topic (e.g., Space, Animals)"
+                                                placeholder="Enter topic (e.g. Space, Animals)"
                                             />
                                             {errors.topic && <div className="invalid-feedback">{errors.topic.message}</div>}
 

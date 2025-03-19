@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const SeqEvents = ({ worksheet, answers, setApiResponse, handleUpdate, modalVisible }) => {
+const SeqEvents = ({ worksheet, answers, setApiResponse, handleUpdate, modalVisible, setModalVisible }) => {
     const [errors, setErrors] = useState({}); 
 
 
@@ -106,6 +106,10 @@ const SeqEvents = ({ worksheet, answers, setApiResponse, handleUpdate, modalVisi
         });
     };
 
+    const handleCloseModal = () => {
+        setModalVisible(false);
+    };
+
     return (
         <div>
             <h4 className="mb-5"><strong>Sequence Events Order</strong></h4>
@@ -134,6 +138,7 @@ const SeqEvents = ({ worksheet, answers, setApiResponse, handleUpdate, modalVisi
                             <div className="modal-content">
                                 <div className="modal-header">
                                     <h5 className="modal-title">Edit Sequence Events Order Worksheet</h5>
+                                    <button type="button" className="btn-close" aria-label="Close" onClick={handleCloseModal}></button>
                                 </div>
                                 <div className="modal-body" style={{ maxHeight: '70vh', overflowY: 'auto' }}>
                                     {worksheet.map((item, index) => (

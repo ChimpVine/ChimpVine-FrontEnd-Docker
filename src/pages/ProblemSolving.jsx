@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ProblemSolving = ({ worksheet, answers, gapStyle, handleUpdate, setApiResponse, modalVisible }) => {
+const ProblemSolving = ({ worksheet, answers, gapStyle, handleUpdate, setApiResponse, modalVisible, setModalVisible }) => {
     const [errors, setErrors] = useState({}); 
 
     
@@ -74,6 +74,11 @@ const ProblemSolving = ({ worksheet, answers, gapStyle, handleUpdate, setApiResp
         });
     };
 
+    const handleCloseModal = () => {
+        setModalVisible(false);
+    };
+
+
     return (
         <div>
             <h4 className="mb-5"><strong>Numerical Problems</strong></h4>
@@ -99,6 +104,7 @@ const ProblemSolving = ({ worksheet, answers, gapStyle, handleUpdate, setApiResp
                             <div className="modal-content">
                                 <div className="modal-header">
                                     <h5 className="modal-title">Edit Numerical Problems Worksheet</h5>
+                                    <button type="button" className="btn-close" aria-label="Close" onClick={handleCloseModal}></button>
                                 </div>
                                 <div className="modal-body" style={{ maxHeight: "70vh", overflowY: "auto" }}>
                                     {worksheet.map((item, index) => (

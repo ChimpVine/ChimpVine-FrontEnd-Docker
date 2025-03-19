@@ -143,8 +143,8 @@ export default function TongueTwister({ BASE_URL }) {
                                                 name="topic"
                                                 value={formData.topic}
                                                 onChange={handleChange}
-                                                disabled={isLoading}
-                                                placeholder="Enter Tongue Twister Topic For eg. Animals, Foods"
+                                                disabled={isLoading}  
+                                                placeholder="Enter topic (e.g. Force, Algebra, or Ancient Egypt)"
                                             />
 
                                             <label htmlFor="number_of_twisters" className="form-label">
